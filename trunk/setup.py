@@ -50,6 +50,11 @@ def install(the_package,version,date):
     packages = list_subpackages(the_package,verbose=False)
     packages = map( '.'.join, packages )
     
+    package_data = {
+    'pypulsion' : [ 'plugins\pint\default_en.txt' ,
+                    'plugins\pint\constants_en.txt' ]
+    }
+    
     # run the setup!!!
     setup(
         name = the_package,
